@@ -2,19 +2,33 @@
 <html lang="en">
 <head>  
 
-    <script>
-
-        setTimeout(function(){
-        
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NJWCR3H');</script>
-        
-        },3000) <- number here (ms) indicates the delay. In this case: 100 milliseconds.
-        
-        </script>
+    +<script>
+        document.addEventListener('DOMContentLoaded', () => {
+      /** init gtm after 3500 seconds - this could be adjusted */
+      setTimeout(initGTM, 5000);
+    });
+    document.addEventListener('scroll', initGTMOnEvent);
+    document.addEventListener('mousemove', initGTMOnEvent);
+    document.addEventListener('touchstart', initGTMOnEvent);
+    function initGTMOnEvent(event) {
+      initGTM();
+      event.currentTarget.removeEventListener(event.type, initGTMOnEvent); // remove the event listener that got triggered
+    }
+    function initGTM() {
+      if (window.gtmDidInit) {
+        return false;
+      }
+      window.gtmDidInit = true; // flag to ensure script does not get added to DOM more than once.
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.onload = () => {
+        dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime(), 'gtm.uniqueEventId': 0 });
+      }; // this part ensures PageViews is always tracked
+      script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NJWCR3H';
+      document.head.appendChild(script);
+    }
+    </script>
  
 
 	<meta charset="utf-8">

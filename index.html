@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
+    <script>
+        const curl = "window.location.href"
+        if (curl != "") {
+        link=document.createElement('link');
+        link.href='window.location.href';
+        link.rel='canonical';
+        document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        </script>
+
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

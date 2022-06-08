@@ -10,14 +10,11 @@
     
     <div class="body-text">Thank you! Your submission has been received! Your email is: <span id="user-ec-email" class="user-ec-email">email id</span> & mobile: <span id="user-ec-phone" class="user-ec-phone">phone</span></div>
     
-<script>
-    const storedEmail = window.localStorage.getItem("email");    
-    const storedPhone = window.localStorage.getItem("phone");    
-
-    if(storedEmail) document.getElementById("user-ec-email").innerHTML= storedEmail
-    if(storedPhone) document.getElementById("user-ec-phone").innerHTML= storedPhone
-
-</script>
+    <script>
+        const storedEmail = window.localStorage.getItem("email");    
+        if(storedEmail) document.getElementById("user-ec-email").innerHTML= storedEmail
+    </script>
+        
 
 
 </body>

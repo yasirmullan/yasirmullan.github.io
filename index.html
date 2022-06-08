@@ -275,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>
             <h3 class="section-title">EC Test form</h3>
-            <form action="/thanks.html">
+            <form action="/thanks.html" id="yas-form">
                 <label for="email">email</label><br>
                 <input type="email" id="email" name="email" value="John@johm.com"><br>
                 <label for="phone">phone</label><br>
@@ -458,16 +458,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script>
 
-        var formElement = document.getElementById('wf-form-EC-Contact-form');
+        var formElement = document.getElementById('yas-form');
          formElement.addEventListener('submit', storeEmail);
         
          function storeEmail(e) {
              var email = document.getElementById('email').value;
-             var phone = document.getElementById('phone').value;
-             window.localStorage.setItem("email","phone", email,phone);
+             window.localStorage.setItem("email", email);
         }
         
-        </script>
+    </script>
 
 
 	<!-- core  -->

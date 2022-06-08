@@ -274,7 +274,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="section" id="testmonial">
         <div class="container">
             <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>
-            <h3 class="section-title">Testmonials</h3>
+            <h3 class="section-title">EC Test form</h3>
+            <form action="/thanks.html">
+                <label for="email">email</label><br>
+                <input type="email" id="email" name="email" value="John@johm.com"><br>
+                <label for="phone">phone</label><br>
+                <input type="phone" id="phone" name="phone" value="91464546555"><br><br>
+                <input type="submit" value="Submit">
+              </form> 
+
 
             <div id="owl-testmonial" class="owl-carousel owl-theme mt-4">
                 <div class="item">
@@ -447,6 +455,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 	
+
+    <script>
+
+        var formElement = document.getElementById('wf-form-EC-Contact-form');
+         formElement.addEventListener('submit', storeEmail);
+        
+         function storeEmail(e) {
+             var email = document.getElementById('email').value;
+             var phone = document.getElementById('phone').value;
+             window.localStorage.setItem("email","phone", email,phone);
+        }
+        
+        </script>
+
+
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -460,6 +483,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Ollie js -->
     <script src="assets/js/Ollie.js"></script>
+
 
 </body>
 </html>

@@ -12,9 +12,13 @@
     
     <script>
         const storedEmail = window.localStorage.getItem("email");    
+        const storedPhone = window.localStorage.getItem("phone");    
+    
         if(storedEmail) document.getElementById("user-ec-email").innerHTML= storedEmail
+        if(storedPhone) document.getElementById("user-ec-phone").innerHTML= storedPhone
+    
     </script>
-        
+       
 
 
 </body>

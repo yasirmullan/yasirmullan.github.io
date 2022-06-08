@@ -463,10 +463,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
          function storeEmail(e) {
              var email = document.getElementById('email').value;
-             window.localStorage.setItem("email", email);
+             var phone = document.getElementById('phone').value;
+             window.localStorage.setItem("email","phone", email,phone);
         }
         
-    </script>
+        </script>
 
 
 	<!-- core  -->

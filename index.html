@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
-
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "4d30ca43-be7e-4dd7-8281-13b2fc8b7078",
+        });
+      });
+    </script>
+    
     <!-- delay code lambda -->
 <script>
     function loadLTGTM(e,t,a,n,o){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],c=t.createElement(a),r="dataLayer"!=n?"&l="+n:"";c.async=!0,c.src="https://www.googletagmanager.com/gtm.js?id="+o+r,d.parentNode.insertBefore(c,d)}function loadOneTapJS(){var e=document.createElement("script");e.src="https://accounts.google.com/gsi/client",e.async=!0,document.getElementsByTagName("head")[0].appendChild(e)}if(screen.width<=768){var fired=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===fired||0!=document.body.scrollTop&&!1===fired)&&(setTimeout(()=>{loadLTGTM(window,document,"script","dataLayer","GTM-NJWCR3H"),loadOneTapJS()},500),fired=!0)},!0)}else setTimeout(()=>{loadLTGTM(window,document,"script","dataLayer","GTM-NJWCR3H"),loadOneTapJS()},500);
